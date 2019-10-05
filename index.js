@@ -276,10 +276,9 @@ const reply_text = (req, message) => {
 const push_update_status = (req) => {
     return request({
         method: `POST`,
-        uri: `${LINE_MESSAGING_API}/push`,
+        uri: `${LINE_MESSAGING_API}/broadcast`,
         headers: LINE_HEADER,
         body: JSON.stringify({
-            to: 'U30ab76ee5cac8535cb6ec7ec48e8fc2f',
             messages: [
                 {
                     type: `text`,
